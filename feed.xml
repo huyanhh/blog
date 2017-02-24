@@ -1,20 +1,26 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Huyanh Hoang</title>
+    <description></description>
+    <link>https://huyanhhoang.co</link>
+    <atom:link href="https://huyanhhoang.co/blog/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Day 2/3</title>
+        <description>Making progress</description>
+        <pubDate>Thu, 23 Feb 2017 00:00:00 -0800</pubDate>
+        <link>https://huyanhhoang.co/blog/posts/day-2-3</link>
+        <guid isPermaLink="true">https://huyanhhoang.co/blog/posts/day-2-3</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Introducing the Challenge</title>
+        <description>Trying Jekyll, designing, and writing all on the same day</description>
+        <pubDate>Tue, 21 Feb 2017 00:00:00 -0800</pubDate>
+        <link>https://huyanhhoang.co/blog/posts/day-1</link>
+        <guid isPermaLink="true">https://huyanhhoang.co/blog/posts/day-1</guid>
+      </item>
+    
   </channel>
 </rss>
